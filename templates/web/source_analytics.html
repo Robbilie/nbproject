@@ -56,7 +56,8 @@
           $('.pg-preview').html(contents);
 
           // get the larger image for the preview
-          var img_server = "http://nb.mit.edu";
+          //var img_server = "http://nb.mit.edu";
+          var img_server = ('https:' == document.location.protocol) ? "https://nb.mit.edu" : "http://nb.mit.edu";
           var ckey = NB.conf.userinfo.ckey;
           var img_url = img_server + "/pdf/cache2/72/100/"+{{ source.id }}+"?ckey="+ckey+";page=" + num;
           $(".pg-preview").find(".page-img").attr("src", img_url);
@@ -90,7 +91,8 @@
               page = new Page(pages[p]);  
 
               // TODO: better way to get the source ID/ckey?
-              var img_server = "http://nb.mit.edu";
+              //var img_server = "http://nb.mit.edu";
+              var img_server = ('https:' == document.location.protocol) ? "https://nb.mit.edu" : "http://nb.mit.edu";
               // var img_server = "";
               var ckey = NB.conf.userinfo.ckey;
               var img_url = img_server + "/pdf/cache2/72/20/"+{{ source.id }}+"?ckey="+ckey+";page=" + p;

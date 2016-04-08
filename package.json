@@ -8,23 +8,24 @@
     "test": "grunt qunit"
   },
   "devDependencies": {
-    "grunt-contrib-cssmin": "~0.12.2",
-    "grunt-contrib-jshint": "~0.11.2",
-    "grunt-contrib-concat": "~0.5.1"
+    "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-css": "^0.5.4"
   },
   "dependencies": {
     "execSync": ">= 0.9"
   },
-  "_comment":{
-  "name": "dashboard-server",
-  "version": "0.0.1",
-  "dependencies": {
-   	"express": "3.1.x",
-   	"mongodb" : "1.1.11" 
-  },
-  "engines": {
-    "node": "0.10.x",
-    "npm": "1.2.x"
+  "_comment": {
+    "name": "dashboard-server",
+    "version": "0.0.1",
+    "dependencies": {
+      "express": "3.1.x",
+      "mongodb": "1.1.11"
+    },
+    "engines": {
+      "node": "0.10.x",
+      "npm": "1.2.x"
+    }
   }
-}
 }

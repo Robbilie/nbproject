@@ -23,7 +23,8 @@ ADMINS         = settings_credentials.__dict__.get("ADMINS", ())
 MANAGERS = ADMINS
 NB_SERVERNAME   = settings_credentials.__dict__.get("NB_SERVERNAME", "localhost")
 NB_HTTP_PORT    = settings_credentials.__dict__.get("NB_HTTP_PORT", "80")
-CRON_EMAIL      = settings_credentials.__dict__.get("CRON_EMAIL", "planet.nb+cron@gmail.com")
+#CRON_EMAIL      = settings_credentials.__dict__.get("CRON_EMAIL", "planet.nb+cron@gmail.com")
+CRON_EMAIL      = settings_credentials.__dict__.get("CRON_EMAIL", "notabene+cron@is.inf.uni-due.de")
 DATABASES       = settings_credentials.DATABASES 
 FACEBOOK_APP_ID = settings_credentials.FACEBOOK_APP_ID
 FACEBOOK_APP_SECRET =  settings_credentials.FACEBOOK_APP_SECRET
@@ -227,12 +228,17 @@ SPREADSHEET_TEMPLATE    = "web/spreadsheet.html"
 
 
 #for utils_notify
-SMTP_CC_USER    = "planet.nb+cc@gmail.com"
-SMTP_REPLY_TO   = "planet.nb+reply@gmail.com"
-PROTOCOL        = "http"
+#SMTP_CC_USER    = "planet.nb+cc@gmail.com"
+#SMTP_REPLY_TO   = "planet.nb+reply@gmail.com"
+SMTP_CC_USER    = "notabene+cc@is.inf.uni-due.de"
+SMTP_REPLY_TO   = "notabene+reply@is.inf.uni-due.de"
+#PROTOCOL        = "http"
+PROTOCOL        = "https"
 HOSTNAME        = NB_SERVERNAME
-SMTP_USER       = "sacha@csail.mit.edu"
-SMTP_SERVER     = "outgoing.csail.mit.edu"
+#SMTP_USER       = "sacha@csail.mit.edu"
+#SMTP_SERVER     = "outgoing.csail.mit.edu"
+SMTP_USER       = "lms-test"
+SMTP_SERVER     = "smtp.is.inf.uni-due.de"
 DO_EMAIL        = True
 
 #for utils_pdf
@@ -245,7 +251,8 @@ REPOSITORY_DIR = "pdf/repository"
 ANNOTATED_DIR = "pdf/annotated"
 RESTRICTED_REPOSITORY_DIR = "pdf/restricted_repository"
 RESOLUTIONS = {"72":{"20": None, "100": None},"288":{"25": None, "33": None, "50": None, "65": None, "80": None, "100": None }}
-SMTP_CC_PDFERROR = "planet.nb+pdferror@gmail.com" 
+#SMTP_CC_PDFERROR = "planet.nb+pdferror@gmail.com" 
+SMTP_CC_PDFERROR = "notabene+pdferror@is.inf.uni-due.de"
 #SMTP_CC_USER
 #SMTP_REPLY_TO
 #SMTP_SERVER
@@ -262,9 +269,11 @@ NBTEAM_EMAIL = "nb-team@csail.mit.edu"
 DEBUG_QUERY = False
 
 #for rpc: 
-SMTP_TEST_USER = "planet.nb+testuser@gmail.com"
+#SMTP_TEST_USER = "planet.nb+testuser@gmail.com"
+SMTP_TEST_USER = "notabene+testuser@is.inf.uni-due.de"
 #HOSTNAME
-SMTP_CC_LOSTPASSWORD =  "planet.nb+lostpassword@gmail.com"
+#SMTP_CC_LOSTPASSWORD =  "planet.nb+lostpassword@gmail.com"
+SMTP_CC_LOSTPASSWORD =  "notabene+lostpassword@is.inf.uni-due.de"
 
 #For Using Django's email framework
 EMAIL_HOST              = settings_credentials.__dict__.get("EMAIL_HOST", 'localhost')
@@ -275,14 +284,17 @@ EMAIL_WATCHDOG          = settings_credentials.__dict__.get("EMAIL_WATCHDOG", "N
 EMAIL_HOST_USER		= settings_credentials.__dict__.get("EMAIL_HOST_USER",  "")
 EMAIL_HOST_PASSWORD     = settings_credentials.__dict__.get("EMAIL_HOST_PASSWORD",  "")
 EMAIL_USE_TLS		= settings_credentials.__dict__.get("EMAIL_USE_TLS", False)
-EMAIL_BCC               = settings_credentials.__dict__.get("EMAIL_BCC",  "planet.nb+bcc@gmail.com")
+#EMAIL_BCC               = settings_credentials.__dict__.get("EMAIL_BCC",  "planet.nb+bcc@gmail.com")
+EMAIL_BCC               = settings_credentials.__dict__.get("EMAIL_BCC",  "")
 
 EMAIL_BACKEND           = settings_credentials.__dict__.get("EMAIL_BACKEND",  'django.core.mail.backends.smtp.EmailBackend')
 EMAIL_FILE_PATH         = settings_credentials.__dict__.get("EMAIL_FILE_PATH", '/tmp/app-messages')
 
 #For Personae framework: 
-PERSONA_EMAIL           = settings_credentials.__dict__.get("PERSONA_EMAIL", "planet.nb+%s@gmail.com")
-PERSONA_PASSWORD        = settings_credentials.__dict__.get("PERSONA_PASSWORD", "secret")
+#PERSONA_EMAIL           = settings_credentials.__dict__.get("PERSONA_EMAIL", "planet.nb+%s@gmail.com")
+#PERSONA_PASSWORD        = settings_credentials.__dict__.get("PERSONA_PASSWORD", "secret")
+PERSONA_EMAIL           = settings_credentials.__dict__.get("PERSONA_EMAIL", "invalid@example.com")
+PERSONA_PASSWORD        = settings_credentials.__dict__.get("PERSONA_PASSWORD", "sunshine")
 
 #For remote debugging: 
 #ENABLE_REMOTE_DEBUGGING = True
