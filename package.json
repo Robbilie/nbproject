@@ -8,13 +8,10 @@
     "test": "grunt qunit"
   },
   "devDependencies": {
-    "grunt-contrib-concat": "^1.0.0",
-    "grunt-contrib-cssmin": "^1.0.1",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-css": "^0.5.4"
-  },
-  "dependencies": {
-    "execSync": ">= 0.9"
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "^0.5.1",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-jshint": "^1.0.0"
   },
   "_comment": {
     "name": "dashboard-server",
