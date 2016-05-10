@@ -308,6 +308,42 @@ def add_youtube_doc(req, ensemble_id):
             return HttpResponseRedirect("/")
     return render_to_response("web/add_youtube_doc.html", {"form": addform})
 
+def add_html5video_doc(req, ensemble_id):
+    import base.models as M
+    user       = UR.getUserInfo(req, False)
+    if user is None:
+        redirect_url = "/login?next=%s" % (req.META.get("PATH_INFO","/"),)
+        return HttpResponseRedirect(redirect_url)
+    if not auth.canEditEnsemble(user.id, ensemble_id):
+        return HttpResponseRedirect("/notallowed")
+    addform = forms.Html5Form()
+    if req.method == 'POST':
+        addform = forms.Html5Form(req.POST)
+        if addform.is_valid():
+            source = M.Source()
+            source.numpages = 1
+            source.w = 0
+            source.h = 0
+            source.rotation = 0
+            source.version = 0
+            source.type = 4
+            source.submittedby=user
+            source.title = addform.cleaned_data['title']
+            source.save()
+            ownership = M.Ownership()
+            ownership.source = source
+            ownership.ensemble_id = ensemble_id
+            ownership.save()
+            info = M.HTML5Info()
+            info.source = source
+            # trailing slash is sometimes added by server redirects
+            # but person specifying upload url may not realize this
+            # so remove trailing slash as well as hash part of the URL
+            info.url = addform.cleaned_data['url'].partition("#")[0].rstrip("/") 
+            info.save();
+            return HttpResponseRedirect("/")
+    return render_to_response("web/add_html5video_doc.html", {"form": addform})
+
 def comment(req, id_comment):
     #id_comment = int(id_comment)
     c = M.Comment.objects.get(pk=id_comment)
