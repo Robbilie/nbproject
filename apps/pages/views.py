@@ -326,7 +326,7 @@ def add_html5video_doc(req, ensemble_id):
             source.h = 0
             source.rotation = 0
             source.version = 0
-            source.type = 4
+            source.type = 3
             source.submittedby=user
             source.title = addform.cleaned_data['title']
             source.save()

@@ -1,0 +1,208 @@
+ERROR 2016-05-10 14:23:59,006 base 29720 140509118510912 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    return  db.Db().getIndexedObjects(names, "id", from_clause, "true" , (uid,uid, uid, uid, id_ensemble))
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-10 14:24:18,817 base 29720 140509118510912 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    return  db.Db().getIndexedObjects(names, "id", from_clause, "true" , (uid,uid, uid, uid, id_ensemble))
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-10 14:24:59,168 base 29720 140509118510912 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    return  db.Db().getIndexedObjects(names, "id", from_clause, "true" , (uid,uid, uid, uid, id_ensemble))
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-10 14:26:49,697 base 29720 140509118510912 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    return  db.Db().getIndexedObjects(names, "id", from_clause, "true" , (uid,uid, uid, uid, id_ensemble))
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-10 14:28:04,875 base 29720 140509118510912 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    return  db.Db().getIndexedObjects(names, "id", from_clause, "true" , (uid,uid, uid, uid, id_ensemble))
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-10 14:31:35,114 base 29720 140509118510912 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    return  db.Db().getIndexedObjects(names, "id", from_clause, "true" , (uid,uid, uid, uid, id_ensemble))
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-10 14:33:02,864 base 30137 140659684063040 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    return  db.Db().getIndexedObjects(names, "id", from_clause, "true" , (uid,uid, uid, uid, id_ensemble))
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-10 14:33:11,831 base 30137 140659684063040 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    return  db.Db().getIndexedObjects(names, "id", from_clause, "true" , (uid,uid, uid, uid, id_ensemble))
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
