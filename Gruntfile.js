@@ -76,7 +76,7 @@ module.exports = function(grunt) {
         src_css:  addPrefix(MODULE_DIR, ["dev/ui.drawable.css", "dev/ui.docView.css"])
     };  
     MODS.DOCVIEW_YOUTUBE = {
-        src_js: addPrefix(MODULE_DIR,["dev/ui.drawable4.js", "dev/ui.docView.video.js" ]),
+        src_js: addPrefix(MODULE_DIR,["dev/ui.drawable4.js", "dev/ui.docView.yt.js" ]),
         src_css:  addPrefix(MODULE_DIR, ["dev/ui.drawable.css", "dev/ui.docView.css", "dev/ui.docView.youtube.css"])
     }; 
     
@@ -110,7 +110,7 @@ module.exports = function(grunt) {
     MODS.NOTEPANEVIEW_YOUTUBE = {
         src_js: [].concat(
             MODS.CONTEXTMENU.src_js, 
-            addPrefix(MODULE_DIR,["dev/ui.notepaneView.video.js"])),
+            addPrefix(MODULE_DIR,["dev/ui.notepaneView.yt.js"])),
         src_css:   [].concat(
             MODS.CONTEXTMENU.src_css, 
             addPrefix(MODULE_DIR, ["dev/ui.notepaneView.css"]))
