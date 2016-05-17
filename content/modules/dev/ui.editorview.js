@@ -231,7 +231,7 @@
         }
       };
 
-      var is_video = model.o.file[self._file].filetype === FILETYPES.TYPE_YOUTUBE;
+      var is_video = model.o.file[self._file].filetype === FILETYPES.TYPE_YOUTUBE || model.o.file[self._file].filetype === FILETYPES.TYPE_HTML5VIDEO;
       var staffoption    = self._allowStaffOnly ? "<option value='2'>Instructors and TAs</option>" : ' ';
       var tagPrivateOption = self._allowTagPrivate ? "<option value='4'>Myself and Tagged Users</option>" : ' ';
       var signoption    = self._allowAnonymous ? "<span id='signoption' title=\"check to keep this comment anonymous to other students\"><input type='checkbox' id='checkbox_sign' value='anonymous'/><label for='checkbox_sign'>Anonymous to students</label></span>" : ' ';
