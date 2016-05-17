@@ -117,44 +117,46 @@ def upload(req):
         f2 = open("%s/%s" % (REPOSITORY_DIR, id_source,),"wb")    
         f2.write(f.read())
         f2.close()                 
-        if insert_pdf_metadata(id_source,  REPOSITORY_DIR):
-            V = {"reply_to": settings.SMTP_REPLY_TO,
-             "email": source.submittedby.email,
-             "title": source.title,  
-             "submitted": ownership.published, 
-             "protocol": settings.PROTOCOL, 
-             "hostname": settings.HOSTNAME, 
-             "id_source": id_source, 
-             "firstname": source.submittedby.firstname
-             }
-            msg = render_to_string("email/msg_pdfdone",V)
-            email = EmailMessage(
-                "The PDF file that you've submitted is now ready on NB.", 
-                msg,
-                settings.EMAIL_FROM,
-                (V["email"], settings.SMTP_CC_USER ), 
-                (settings.EMAIL_BCC, ))
-            email.send()
-        else:
-            #send email that stg didn't work and remove that document.         
-            V = {"reply_to": settings.SMTP_REPLY_TO,
-                     "email": source.submittedby.email,
-                     "source_id": id_source,
-                     "title": source.title, 
-                     "submitted": ownership.published, 
-                     "support":  settings.SUPPORT_LINK,
-                     "contact_email": settings.NBTEAM_EMAIL,
-                     "firstname": source.submittedby.firstname
-                     }
-            ownership.delete()
-            source.delete()
-            msg = render_to_string("email/msg_pdferror",V)
-            email = EmailMessage(
-                "NB was unable to read a PDF file that you've submitted", 
-                msg,  
-                settings.EMAIL_FROM,
-                (V["email"], settings.SMTP_CC_PDFERROR ), (settings.EMAIL_BCC, ))
-            email.send()
+        inserted = insert_pdf_metadata(id_source,  REPOSITORY_DIR)
+        if settings.DO_DEBUG_EMAIL:
+            if inserted:
+                V = {"reply_to": settings.SMTP_REPLY_TO,
+                 "email": source.submittedby.email,
+                 "title": source.title,  
+                 "submitted": ownership.published, 
+                 "protocol": settings.PROTOCOL, 
+                 "hostname": settings.HOSTNAME, 
+                 "id_source": id_source, 
+                 "firstname": source.submittedby.firstname
+                 }
+                msg = render_to_string("email/msg_pdfdone",V)
+                email = EmailMessage(
+                    "The PDF file that you've submitted is now ready on NB.", 
+                    msg,
+                    settings.EMAIL_FROM,
+                    (V["email"], settings.SMTP_CC_USER ), 
+                    (settings.EMAIL_BCC, ))
+                email.send()
+            else:
+                #send email that stg didn't work and remove that document.         
+                V = {"reply_to": settings.SMTP_REPLY_TO,
+                         "email": source.submittedby.email,
+                         "source_id": id_source,
+                         "title": source.title, 
+                         "submitted": ownership.published, 
+                         "support":  settings.SUPPORT_LINK,
+                         "contact_email": settings.NBTEAM_EMAIL,
+                         "firstname": source.submittedby.firstname
+                         }
+                ownership.delete()
+                source.delete()
+                msg = render_to_string("email/msg_pdferror",V)
+                email = EmailMessage(
+                    "NB was unable to read a PDF file that you've submitted", 
+                    msg,  
+                    settings.EMAIL_FROM,
+                    (V["email"], settings.SMTP_CC_PDFERROR ), (settings.EMAIL_BCC, ))
+                email.send()
         r.content =  UR.prepare_response({})
     else: 
         r.content =  UR.prepare_response({}, 1, "NOT ALLOWED to insert a file to this group")

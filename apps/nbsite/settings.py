@@ -241,6 +241,7 @@ HOSTNAME        = NB_SERVERNAME
 SMTP_USER       = "lms-test"
 SMTP_SERVER     = "smtp.is.inf.uni-due.de"
 DO_EMAIL        = True
+DO_DEBUG_EMAIL  = False
 
 #for utils_pdf
 CACHE_DIR = "pdf/cache2"

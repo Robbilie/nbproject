@@ -336,3 +336,1058 @@ ProgrammingError: relation "base_v_comment" does not exist
 LINE 2: from base_v_comment vc left join (select distinct comment_id...
              ^
 
+ERROR 2016-05-17 14:03:24,752 base 30137 140659684063040 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    m.user_id = ? and m.ensemble_id = vc.ensemble_id and ((vc.type>2 or ( vc.type>1 and m.admin=true)) or vc.author_id=?)
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-17 14:12:07,848 base 30137 140659684063040 Internal Server Error: /pdf3/upload
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/upload/views.py", line 103, in upload
+    f = req.FILES["file"]
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/datastructures.py", line 322, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+MultiValueDictKeyError: "'file'"
+ERROR 2016-05-17 14:17:48,679 base 30137 140659684063040 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 275, in get_file_stats
+    m.user_id = ? and m.ensemble_id = vc.ensemble_id and ((vc.type>2 or ( vc.type>1 and m.admin=true)) or vc.author_id=?)
+  File "/opt/nbproject/apps/base/db.py", line 127, in getIndexedObjects
+    c = self.execute(qry, args, connection)
+  File "/opt/nbproject/apps/base/db.py", line 49, in execute
+    cursor.execute(qry, args)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: relation "base_v_comment" does not exist
+LINE 2: from base_v_comment vc left join (select distinct comment_id...
+             ^
+
+ERROR 2016-05-17 14:30:59,785 base 16101 140582516737856 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:31:08,086 base 16101 140582516737856 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:31:10,161 base 16101 140582516737856 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:31:16,127 base 16101 140582516737856 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:31:17,802 base 16101 140582516737856 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:31:23,384 base 16101 140582516737856 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 663, in log_history
+    output = annotations.getPending(uid, payload)
+  File "/opt/nbproject/apps/base/annotations.py", line 1318, in getPending
+    output["locations"] = UR.qs2dict(locations|recent_locations)
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_location.pause does not exist
+LINE 1: ...location"."duration", "base_location"."is_title", "base_loca...
+                                                             ^
+
+ERROR 2016-05-17 14:31:26,504 base 16101 140582516737856 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:01,003 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:01,868 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:02,911 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:03,934 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:05,651 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:07,119 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:07,658 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 663, in log_history
+    output = annotations.getPending(uid, payload)
+  File "/opt/nbproject/apps/base/annotations.py", line 1318, in getPending
+    output["locations"] = UR.qs2dict(locations|recent_locations)
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_location.pause does not exist
+LINE 1: ...location"."duration", "base_location"."is_title", "base_loca...
+                                                             ^
+
+ERROR 2016-05-17 14:32:08,392 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:09,441 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:10,433 base 16133 140089368610624 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:22,295 base 16166 140093358896960 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:23,249 base 16166 140093358896960 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:25,469 base 16166 140093358896960 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:32:39,934 base 16166 140093358896960 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:33:07,202 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:33:09,183 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:33:23,373 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 663, in log_history
+    output = annotations.getPending(uid, payload)
+  File "/opt/nbproject/apps/base/annotations.py", line 1318, in getPending
+    output["locations"] = UR.qs2dict(locations|recent_locations)
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_location.pause does not exist
+LINE 1: ...location"."duration", "base_location"."is_title", "base_loca...
+                                                             ^
+
+ERROR 2016-05-17 14:33:41,544 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:34:07,667 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 663, in log_history
+    output = annotations.getPending(uid, payload)
+  File "/opt/nbproject/apps/base/annotations.py", line 1318, in getPending
+    output["locations"] = UR.qs2dict(locations|recent_locations)
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_location.pause does not exist
+LINE 1: ...location"."duration", "base_location"."is_title", "base_loca...
+                                                             ^
+
+ERROR 2016-05-17 14:34:31,403 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 310, in getObjects
+    output[t] = getattr(annotations, "get_"+t)(uid, p2)
+  File "/opt/nbproject/apps/base/annotations.py", line 234, in get_ensembles
+    return UR.qs2dict(my_memberships, names, "ID")
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_ensemble.default_pause does not exist
+LINE 1: ...llow_download", "base_ensemble"."allow_ondemand", "base_ense...
+                                                             ^
+
+ERROR 2016-05-17 14:35:23,365 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 663, in log_history
+    output = annotations.getPending(uid, payload)
+  File "/opt/nbproject/apps/base/annotations.py", line 1318, in getPending
+    output["locations"] = UR.qs2dict(locations|recent_locations)
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_location.pause does not exist
+LINE 1: ...location"."duration", "base_location"."is_title", "base_loca...
+                                                             ^
+
+ERROR 2016-05-17 14:36:07,672 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 663, in log_history
+    output = annotations.getPending(uid, payload)
+  File "/opt/nbproject/apps/base/annotations.py", line 1318, in getPending
+    output["locations"] = UR.qs2dict(locations|recent_locations)
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_location.pause does not exist
+LINE 1: ...location"."duration", "base_location"."is_title", "base_loca...
+                                                             ^
+
+ERROR 2016-05-17 14:37:23,373 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 663, in log_history
+    output = annotations.getPending(uid, payload)
+  File "/opt/nbproject/apps/base/annotations.py", line 1318, in getPending
+    output["locations"] = UR.qs2dict(locations|recent_locations)
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_location.pause does not exist
+LINE 1: ...location"."duration", "base_location"."is_title", "base_loca...
+                                                             ^
+
+ERROR 2016-05-17 14:38:07,695 base 16198 140701691434816 Internal Server Error: /pdf4/rpc
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/opt/nbproject/apps/rpc/views.py", line 808, in run
+    r.content = getattr(MODULE, fctname)(payload, req)
+  File "/opt/nbproject/apps/rpc/views.py", line 663, in log_history
+    output = annotations.getPending(uid, payload)
+  File "/opt/nbproject/apps/base/annotations.py", line 1318, in getPending
+    output["locations"] = UR.qs2dict(locations|recent_locations)
+  File "/opt/nbproject/apps/base/utils_response.py", line 83, in qs2dict
+    for r in qs:
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 162, in __iter__
+    self._fetch_all()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "/usr/local/lib/python2.7/dist-packages/django/db/models/sql/compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/utils.py", line 98, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/local/lib/python2.7/dist-packages/django/db/backends/utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+ProgrammingError: column base_location.pause does not exist
+LINE 1: ...location"."duration", "base_location"."is_title", "base_loca...
+                                                             ^
+
